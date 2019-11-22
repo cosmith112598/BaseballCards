@@ -1,0 +1,66 @@
+h1 {
+    color: darkblue;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+h2 {
+    color: darkred;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+h3 {
+    color: #000000;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.wtf-container {
+    display: grid;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+.card-container {
+	perspective: 1000px;
+}
+	.card-container:hover .card, .card-container.hover .card {
+		transform: rotateY(180deg);
+	}
+
+.card-container, .front, .back {
+	width: 320px;
+	height: 350px;
+}
+.card {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+    cursor: crosshair;
+	position: relative;
+}
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.front {
+	z-index: 2;
+    transform: rotateY(0deg);
+    background-color: rosybrown;
+}
+.back {
+    transform: rotateY(180deg);
+    background-color: royalblue;
+}
+.row {
+    display: flex;
+    padding: 0px 36px 0px 0px;
+    width: 100%;
+}
+.column {
+    float: left;
+    height: 350px;
+    width: 20%;
+    justify-content: center;
+    margin: 2px 2px 2px 2px;
+    padding: 2px 2px 2px 2px;
+    object-fit: cover;
+    text-align: center;
+    font-size: 34px;
+}
